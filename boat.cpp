@@ -59,23 +59,7 @@ static const Waypoint waypoints[] = {
     { 20000, 180 },   // 20s+:   turn to 180
 };
 // OPEN LOOP WITH DUAL PROP------------------------------------
-#elif defined(DUAL_MOTOR)
-static const Waypoint waypoints[] = {
-    {     0,   0 },   // 0–10s:  drive straight
-    { 10000, 0.5 },   // 10–11s: turn L at half current throttle
-    { 11000,   0 },   // 11–19s: drive straight
-    { 19000, 0.5 },   // 19–20s: turn L at half current throttle
-    { 20000,   0 },   // 20s+:   drive straight
-};
-// OPEN LOOP WITH RUDDER---------------------------------------
-#else
-static const Waypoint waypoints[] = {
-    {     0,   0 },   // 0–10s:  rudder straight
-    { 10000,  45 },   // 10–11s: turn L
-    { 11000,   0 },   // 11–19s: rudder straight
-    { 19000,  45 },   // 19–20s: turn L
-    { 20000,   0 },   // 20s+:   rudder straight
-};
+
 #endif
 static const int WAYPOINT_COUNT = sizeof(waypoints) / sizeof(waypoints[0]);
 
